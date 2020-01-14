@@ -1,0 +1,59 @@
+{
+  "start": {
+    "label": "start",
+    "name": "blend",
+    "timeout": 4000,
+    "transitions": [],
+    "brightness": 20,
+    "interval": 10,
+    "color": "FFFFFF",
+    "secondColor": "000000"
+  },
+  "connection": {
+    "label": "connection",
+    "name": "blend",
+    "timeout": 1500,
+    "transitions": [],
+    "brightness": 20,
+    "interval": 10,
+    "color": "00FF11",
+    "secondColor": "000000"
+  },
+  "error": {
+    "label": "error",
+    "name": "flash",
+    "timeout": 3000,
+    "transitions": [],
+    "interval": 700,
+    "brightness": 10,
+    "color": "FF0000"
+  },
+  "stop": {
+    "label": "stop",
+    "name": "solid",
+    "timeout": 750,
+    "transitions": ["*", "dpad"],
+    "brightness": 10,
+    "color": "00FF11"
+  },
+  "drive": {
+    "label": "drive",
+    "name": "scan",
+    "timeout": 500,
+    "transitions": ["stop"],
+    "interval": 30,
+    "brightness": 10,
+    "width": 5,
+    "startIndex": 0,
+    "endIndex": 30,
+    "color": "00FF11"
+  },
+  "auto": {
+    "label": "auto",
+    "name": "loop",
+    "interval": 30,
+    "brightness": 10,
+    "width": 5,
+    "color": "AA00CC"
+  }
+}

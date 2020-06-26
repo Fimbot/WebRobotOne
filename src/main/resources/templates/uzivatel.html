@@ -20,7 +20,7 @@
     <table>
         <tr>
             <td>
-                <a href="menu.html" th:href="@{/menu}" class="actionButtonLink">Zpět menu</a>
+                <a href="menu.html" th:href="@{/menu}" class="button">Zpět menu</a>
             </td>
             <td>
                 <p> <a th:href="'new.html'" href="detail.html" class="button">Přidat nový kontakt</a>
@@ -31,17 +31,20 @@
     <table>
         <tr>
             <th>Číslo</th>
-            <th>Název</th>
-            <th>Autor</th>
-            <th>Akce</th>
+            <th>Přijmeni</th>
+            <th>Jmeno</th>
+            <th>role</th>
         </tr>
-        <tr th:each="jedenKontakt : ${seznamKontaktu}">
-            <td th:text="${jedenKontakt.id}">Číslo</td>
-            <td th:text="${jedenKontakt.jmeno}">Jméno</td>
-            <td th:text="${jedenKontakt.telefonniCislo}">Telefon</td>
-            <td th:text="${jedenKontakt.email}">Email</td>
-            <td><a href="detail.html" th:href="${jedenKontakt.id} + '.html'" class="button">Edit</a>
-                <form th:action="${jedenKontakt.id}" method="post">
+        <tr th:each="uzivatel : ${uzivatele}">
+            <td th:text="${uzivatel.id}">Číslo</td>
+            <td th:text="${uzivatel.jmeno}">Jméno</td>
+            <td th:text="${uzivatel.prijmeni}">Prijmeni</td>
+            <td th:text="${uzivatel.role}">Role</td>
+            <td>
+                <a href="detail.html" th:href="${uzivatel.id} + '.html'" class="button">Edit</a>
+            </td>
+            <td>
+                <form th:action="${uzivatel.id}" method="post">
                     <input type="hidden" name="_method" value="DELETE"/>
                     <input type="submit" value="Smazat" class="button"/>
                 </form>

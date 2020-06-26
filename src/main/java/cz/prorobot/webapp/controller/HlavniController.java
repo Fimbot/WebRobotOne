@@ -1,5 +1,4 @@
 package cz.prorobot.webapp.controller;
-
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.*;

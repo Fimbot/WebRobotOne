@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/style.css"
+          th:href="@{'/css/style.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="@{'/images/favicon.png'}"/>
+    <title>WEB control robot</title>
+</head>
+<body>
+    <div class="page">
+
+        <h1>Hlavní menu pro ovládání robota:</h1>
+    </div>
+
+    <table>
+
+            <tr>
+                <td colspan="2">
+                    <a href="rizeni.html"
+                    th:href="@{/rizeni}"
+                    class="actionButtonLink">Řízení robota      </a>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="makra.html"
+                       th:href="@{/makra}"
+                       class="actionButtonLink">Makra chování      </a>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                <a href="nastaveni.html"
+                   th:href="@{/nastaveni}"
+                   class="actionButtonLink">Nastavení parametrů</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                <a class="actionButtonLink"
+                   href="uzivatel.html"
+                   th:href="@{/uzivatel}">Uživatelé          </a>
+                </td>
+            </tr>
+
+      
+
+    </table>
+</body>
+</html>

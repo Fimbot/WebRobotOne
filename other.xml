@@ -1,0 +1,66 @@
+<application>
+  <component name="AppInspectionProfilesVisibleTreeState">
+    <entry key="Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="GlobalAntConfiguration">
+    <filtersTableLayout />
+    <propertiesTableLayout />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ColorChooser.RecentColors" value="94-249-94-255,,,0-0-0-255,,,200-241-249-255,,,255-255-255-255" />
+    <property name="Copy.OpenInEditor" value="true" />
+    <property name="IJ_BASE_PACKAGE" value="cz.prorobot" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="SqlStructureView.filterD.file.structure.state" value="true" />
+    <property name="defaultJdkConfigured" value="true" />
+    <property name="evlsprt3.183" value="14" />
+    <property name="file.chooser.recent.files" value="$JAVATRAINING$/Projects/Java-2/Lekce09/20-informačni-system&#10;C:/Java-Training/Projects/Java-2/Lekce10/94-Kontakty-JDBC_Repository-Reseni&#10;C:/Java-Training/Projects/Java-2/Lekce07/20-informačni-system&#10;C:/Java-Training/Projects/Java-2/Lekce09/60-JDBC_VideoBoss-Reseni&#10;C:/Java-Training/Projects/Java-2/Lekce12/30-VideoBoss-Hotovy_war&#10;C:/Java-Training/Projects/Java-2/Projekt/WebRobotOne&#10;C:/Java-Training/Projects/Java-2/Moje/chalupa&#10;C:/Java-Training/Projects/Java-2/Lekce10/52-DailyPlanet-JDBC_Repository-Zadani&#10;C:/Java-Training/Projects/Java-2/Lekce10/53-DailyPlanet-JDBC_Repository-Reseni&#10;D:/Skola/AI2-uhk/Semestr1z/KPPRO/cizi/PPRO-Kříž/projekt&#10;C:/Java-Training/Projects/Java-2/Lekce08/92-Seznam_kontaktu-Repository_interface-Reseni&#10;C:/Java-Training/Projects/Java-2/Lekce07/71-Seznam_kontaktu-Edit-Reseni&#10;C:/Java-Training/Projects/Java-2/Lekce07/31-Daily_Planet-CRUD-Reseni&#10;C:/Java-Training/Projects/Java-2/Moje/piweb-master&#10;C:/Java-Training/Projects/Java-2/Lekce06/40-seznam-jmen&#10;C:/Java-Training/Projects/Java-2/Lekce06&#10;C:/Java-Training/Projects/Java-2/Lekce05/30-Husy-kralici&#10;C:/Java-Training/Projects/Java-2/Lekce05/20-Arimetrika&#10;C:/Java-Training/Projects/Java-2/Lekce05/21-Aritmetika-Reseni&#10;C:/Java-Training/Projects/Java-2/Lekce04/20-Seznam-bezdomovcu&#10;C:/Java-Training/Projects/Java-2/Lekce04/10-seznam-kontaktu&#10;C:/Java-Training/Projects/Java-2/Lekce03/20-seznam-hracu&#10;C:/Java-Training/Projects/Java-2/Lekce03/21-seznam&#10;C:/Java-Training/Projects/Java-2/Lekce03/000-opakovani&#10;C:/Java-Training/Projects/Java-2/Lekce02/20-Dnesni_datum&#10;C:/Java-Training/Projects/Java-2/Lekce02/10-Dynamicky-web&#10;C:/Java-Training/Projects/Java-2/Lekce01/20-VideoBoss&#10;C:/Java-Training/Projects/DemoWebApplication" />
+    <property name="file.gist.reindex.count" value="598" />
+    <property name="fileTypeChangedCounter" value="1" />
+    <property name="installed.kotlin.plugin.version" value="1.3.11-release-IJ2018.3-1" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="project.wizard.group" value="User-defined" />
+    <property name="project.wizard.template" value="Java Console App" />
+    <property name="ts.lib.d.ts.version" value="3.2.1" />
+  </component>
+  <component name="SelectProjectTemplateSettings">
+    <option name="EXPERT_MODE" value="true" />
+  </component>
+  <component name="WebServicesPluginSettings" WebServicesUrlPathPrefix="/services" ASK_TO_INSTALL_SOAPUI="true" />
+  <component name="com.intellij.ide.fileTemplates.impl.FileTemplateManagerImpl">
+    <recent_templates>
+      <option name="RECENT_TEMPLATES">
+        <value>
+          <list size="0" />
+        </value>
+      </option>
+    </recent_templates>
+  </component>
+  <component name="com.intellij.javaee.ExternalResourceManagerImpl">
+    <ignored-resource url="http://exslt.org/strings" />
+    <ignored-resource url="http://relaxng.org/ns/compatibility/annotations/1.0" />
+    <ignored-resource url="http://exslt.org/dates-and-times" />
+    <ignored-resource url="http://exslt.org/dynamic" />
+    <ignored-resource url="http://exslt.org/math" />
+    <ignored-resource url="http://exslt.org/sets" />
+    <ignored-resource url="http://www.w3.org/1998/Math/MathML" />
+    <ignored-resource url="tapestry:parameter" />
+    <ignored-resource url="urn:idea:xslt-plugin#extensions" />
+    <ignored-resource url="http://exslt.org/common" />
+    <ignored-resource url="http://www.w3.org/2000/svg" />
+  </component>
+</application>

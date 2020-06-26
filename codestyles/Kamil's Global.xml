@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<code_scheme name="Kamil's Global">
+  <option name="JAVA_INDENT_OPTIONS">
+    <value>
+      <option name="INDENT_SIZE" value="4" />
+      <option name="CONTINUATION_INDENT_SIZE" value="8" />
+      <option name="TAB_SIZE" value="8" />
+      <option name="USE_TAB_CHARACTER" value="false" />
+      <option name="SMART_TABS" value="false" />
+      <option name="LABEL_INDENT_SIZE" value="0" />
+      <option name="LABEL_INDENT_ABSOLUTE" value="false" />
+      <option name="USE_RELATIVE_INDENTS" value="false" />
+    </value>
+  </option>
+  <option name="CLASS_COUNT_TO_USE_IMPORT_ON_DEMAND" value="1" />
+  <option name="NAMES_COUNT_TO_USE_IMPORT_ON_DEMAND" value="1" />
+  <option name="PACKAGES_TO_USE_IMPORT_ON_DEMAND">
+    <value>
+      <package name="java.awt" withSubpackages="true" static="false" />
+      <package name="org.easymock" withSubpackages="true" static="false" />
+      <package name="javax.swing" withSubpackages="true" static="false" />
+    </value>
+  </option>
+  <option name="IMPORT_LAYOUT_TABLE">
+    <value>
+      <package name="java" withSubpackages="true" static="false" />
+      <package name="javax" withSubpackages="true" static="false" />
+      <package name="org" withSubpackages="true" static="false" />
+      <package name="junit" withSubpackages="true" static="false" />
+      <package name="com" withSubpackages="true" static="false" />
+      <package name="" withSubpackages="true" static="false" />
+      <emptyLine />
+      <package name="" withSubpackages="true" static="true" />
+    </value>
+  </option>
+  <option name="RIGHT_MARGIN" value="110" />
+  <option name="HTML_TEXT_WRAP" value="0" />
+  <option name="HTML_DO_NOT_INDENT_CHILDREN_OF" value="html" />
+  <option name="JSP_PREFER_COMMA_SEPARATED_IMPORT_LIST" value="true" />
+  <option name="KEEP_BLANK_LINES_IN_DECLARATIONS" value="1" />
+  <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+  <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="1" />
+  <option name="BLANK_LINES_AROUND_METHOD" value="2" />
+  <option name="BLANK_LINES_AFTER_CLASS_HEADER" value="1" />
+  <option name="SPACE_BEFORE_ARRAY_INITIALIZER_LBRACE" value="true" />
+  <JavaeeCodeStyleSettings>
+    <option name="ENTITY_HI_SUFFIX" value="Factory" />
+    <option name="ENTITY_RI_SUFFIX" value="Remote" />
+    <option name="ENTITY_LHI_PREFIX" value="" />
+    <option name="ENTITY_LHI_SUFFIX" value="LocalFactory" />
+    <option name="ENTITY_LI_PREFIX" value="" />
+    <option name="ENTITY_LI_SUFFIX" value="Local" />
+    <option name="ENTITY_DD_SUFFIX" value="SessionBean" />
+    <option name="ENTITY_VO_SUFFIX" value="DTO" />
+    <option name="SESSION_RI_SUFFIX" value="Intf" />
+    <option name="SESSION_LHI_PREFIX" value="" />
+    <option name="SESSION_LHI_SUFFIX" value="LocalHome" />
+    <option name="SESSION_LI_PREFIX" value="" />
+    <option name="SESSION_LI_SUFFIX" value="LocalIntf" />
+  </JavaeeCodeStyleSettings>
+  <XML>
+    <option name="XML_TEXT_WRAP" value="0" />
+    <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
+  </XML>
+  <codeStyleSettings language="CFML">
+    <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+    <option name="PARENT_SETTINGS_INSTALLED" value="true" />
+  </codeStyleSettings>
+  <codeStyleSettings language="CoffeeScript">
+    <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+    <option name="PARENT_SETTINGS_INSTALLED" value="true" />
+  </codeStyleSettings>
+  <codeStyleSettings language="ECMA Script Level 4">
+    <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+    <option name="BLANK_LINES_AROUND_METHOD" value="2" />
+    <option name="PARENT_SETTINGS_INSTALLED" value="true" />
+  </codeStyleSettings>
+  <codeStyleSettings language="Groovy">
+    <option name="KEEP_BLANK_LINES_IN_DECLARATIONS" value="1" />
+    <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+    <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="1" />
+    <option name="BLANK_LINES_AROUND_METHOD" value="2" />
+    <option name="BLANK_LINES_AFTER_CLASS_HEADER" value="1" />
+    <option name="PARENT_SETTINGS_INSTALLED" value="true" />
+  </codeStyleSettings>
+  <codeStyleSettings language="JAVA">
+    <option name="KEEP_BLANK_LINES_IN_DECLARATIONS" value="1" />
+    <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+    <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="1" />
+    <option name="BLANK_LINES_AFTER_CLASS_HEADER" value="1" />
+    <option name="SPACE_BEFORE_ARRAY_INITIALIZER_LBRACE" value="true" />
+    <option name="PARENT_SETTINGS_INSTALLED" value="true" />
+  </codeStyleSettings>
+  <codeStyleSettings language="JavaScript">
+    <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+    <option name="PARENT_SETTINGS_INSTALLED" value="true" />
+    <indentOptions>
+      <option name="CONTINUATION_INDENT_SIZE" value="8" />
+    </indentOptions>
+  </codeStyleSettings>
+  <codeStyleSettings language="PHP">
+    <option name="KEEP_BLANK_LINES_IN_DECLARATIONS" value="1" />
+    <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+    <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="1" />
+    <option name="BLANK_LINES_AROUND_METHOD" value="2" />
+    <option name="BLANK_LINES_AFTER_CLASS_HEADER" value="1" />
+    <option name="SPACE_BEFORE_ARRAY_INITIALIZER_LBRACE" value="true" />
+    <option name="PARENT_SETTINGS_INSTALLED" value="true" />
+  </codeStyleSettings>
+  <codeStyleSettings language="SQL">
+    <indentOptions>
+      <option name="CONTINUATION_INDENT_SIZE" value="8" />
+      <option name="TAB_SIZE" value="4" />
+    </indentOptions>
+  </codeStyleSettings>
+  <codeStyleSettings language="TypeScript">
+    <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+    <option name="PARENT_SETTINGS_INSTALLED" value="true" />
+  </codeStyleSettings>
+</code_scheme>
+

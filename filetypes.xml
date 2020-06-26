@@ -1,0 +1,20 @@
+<application>
+  <component name="FileTypeManager" version="17">
+    <ignoreFiles list="*.hprof;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.IJI.*;.bundle;.git;.hg;.sbas;.svn;.tox;CVS;RCS;SCCS;__pycache__;_svn;vssver.scc;vssver2.scc;" />
+    <extensionMap>
+      <mapping ext="klib" type="ARCHIVE" />
+      <mapping ext="schemas" type="PLAIN_TEXT" />
+      <mapping ext="bean" type="PLAIN_TEXT" />
+      <mapping ext="driver" type="PLAIN_TEXT" />
+      <mapping ext="url" type="PLAIN_TEXT" />
+      <mapping ext="x99" type="PLAIN_TEXT" />
+      <mapping ext="ics" type="PLAIN_TEXT" />
+      <mapping ext="properites" type="PLAIN_TEXT" />
+      <mapping ext="fm" type="PLAIN_TEXT" />
+      <mapping ext="command" type="PLAIN_TEXT" />
+      <mapping ext="config" type="Properties" />
+      <mapping ext="handlers" type="Properties" />
+      <mapping ext="asmx" type="XML" />
+    </extensionMap>
+  </component>
+</application>

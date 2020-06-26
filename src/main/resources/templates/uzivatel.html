@@ -23,7 +23,7 @@
                 <a href="menu.html" th:href="@{/menu}" class="button">Zpět menu</a>
             </td>
             <td>
-                <p> <a th:href="'new.html'" href="detail.html" class="button">Přidat nový kontakt</a>
+                <p> <a th:href="@{/uzivatelDetail}" href="uzivatelDetail.html" class="button">Přidat nový kontakt</a>
             </td>
         </tr>
     </table>
@@ -34,7 +34,7 @@
             <th>Přijmeni</th>
             <th>Jmeno</th>
             <th>role</th>
-            
+
         </tr>
         <tr th:each="uzivatel : ${uzivatele}">
             <td th:text="${uzivatel.id}">Číslo</td>

@@ -46,13 +46,7 @@ public class HlavniController {
         return drzakNaData ;
     }
 
-    @RequestMapping(value = "/uzivatel", method = RequestMethod.GET)
-    public ModelAndView zobrazSeznam() {
-        ModelAndView drzakNaData = new ModelAndView("uzivatel");
-        List<Uzivatel> all = uzivatelRepository.findAll();
-        drzakNaData.addObject("uzivatele", all);
-        return drzakNaData ;
-    }
+
 
 
 }

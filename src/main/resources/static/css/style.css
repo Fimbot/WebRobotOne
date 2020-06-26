@@ -65,6 +65,18 @@ td {
     border-left: 3px solid #FFFFFF;
 }
 
+.button {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    background-color: #F47E00;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #FFFFFF;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #FFFFFF;
+}
+
 .actionButtonForm {
     display: inline;
 }

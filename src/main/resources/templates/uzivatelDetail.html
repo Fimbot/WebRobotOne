@@ -12,44 +12,48 @@
     <title>WEB control robot</title>
 </head>
 <body>
-    <div class="page">
+<div class="page">
+    <h1>Detail kontaktu</h1>
 
-        <h1>Edituj uživatele:</h1>
-    </div>
+    <form method="post">
+        <table>
+            <tr>
+                <td><label for="jmeno">Jméno</label></td>
+                <td>
+                    <input id="jmeno" name="jméno" value="Krteček" type="text"
+                           th:value="${uzivatel.jmeno}"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="prijmeni">Přijmení</label></td>
+                <td>
+                    <input id="prijmeni" name="Přijmení" value="Mates" type="text"
+                           th:value="${uzivatel.prijmeni}"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="role">Role</label></td>
+                <td>
+                    <input id="role" name="Role" value=0 type="number"
+                           th:value="${uzivatel.role}"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="heslo">Role</label></td>
+                <td>
+                    <input id="heslo" name="Heslo" value=0 type="password"
+                           th:value="${uzivatel.getHeslo_hash()}"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <a href="index.html" th:href="'.'" class="button">Zpět</a>
+                    <input type="submit" class="button" value="Uložit změny"/>
+                </td>
+            </tr>
+        </table>
+    </form>
 
-    <table>
-        <tr>
-            <td>
-                <a href="menu.html" th:href="@{/menu}" class="button">Zpět menu</a>
-            </td>
-            <td>
-                <a  href="uzivatelDetail.html" th:href=@{/newUzivatel} class="button">Přidat nový kontakt</a>
-            </td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <th>Číslo</th>
-            <th>Název</th>
-            <th>Autor</th>
-            <th>Akce</th>
-        </tr>
-        <tr th:each="jedenKontakt : ${seznamKontaktu}">
-            <td th:text="${jedenKontakt.id}">Číslo</td>
-            <td th:text="${jedenKontakt.jmeno}">Jméno</td>
-            <td th:text="${jedenKontakt.telefonniCislo}">Telefon</td>
-            <td th:text="${jedenKontakt.email}">Email</td>
-            <td><a href="detail.html" th:href="${jedenKontakt.id} + '.html'" class="button">Edit</a>
-                <form th:action="${jedenKontakt.id}" method="post">
-                    <input type="hidden" name="_method" value="DELETE"/>
-                    <input type="submit" value="Smazat" class="button"/>
-                </form>
-            </td>
-        </tr>
-    </table>
-
-
-
+</div>
 </body>
 </html>

@@ -59,10 +59,10 @@ td {
     background-color: #F47E00;
 
     padding: 2px 6px 2px 6px;
-    border-top: 3px solid #FFFFFF;
-    border-right: 3px solid #333333;
-    border-bottom: 3px solid #333333;
-    border-left: 3px solid #FFFFFF;
+    border-top: 6px solid #eaeaea;
+    border-right: 6px solid #333333;
+    border-bottom: 6px solid #333333;
+    border-left: 6px solid #eaeaea;
 }
 
 .button {
@@ -71,10 +71,10 @@ td {
     font-size: 1.5em;
     background-color: #F47E00;
     padding: 2px 6px 2px 6px;
-    border-top: 1px solid #FFFFFF;
-    border-right: 1px solid #333333;
-    border-bottom: 1px solid #333333;
-    border-left: 1px solid #FFFFFF;
+    border-top: 3px solid #eaeaea;
+    border-right: 3px solid #333333;
+    border-bottom: 3px solid #333333;
+    border-left: 3px solid #eaeaea;
 }
 
 .actionButtonForm {

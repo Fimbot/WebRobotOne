@@ -24,6 +24,18 @@ public class UzivatelController {
         return drzakNaData ;
     }
 
+    @RequestMapping(value = "/uzivatelNovy", method = RequestMethod.GET)
+    public ModelAndView zobrazDetail() {
+        ModelAndView drzakNaData = new ModelAndView("uzivatelDetail");
+        Uzivatel uzivatel= new Uzivatel();
+        drzakNaData.addObject("uzivatel",uzivatel);
+        return drzakNaData ;
+    }
+
+
+
+
+
 
 
 

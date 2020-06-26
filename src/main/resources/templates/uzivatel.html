@@ -23,7 +23,7 @@
                 <a href="menu.html" th:href="@{/menu}" class="button">Zpět menu</a>
             </td>
             <td>
-                <p> <a th:href="@{/uzivatelDetail}" href="uzivatelDetail.html" class="button">Přidat nový kontakt</a>
+                <p> <a th:href="@{/uzivatelNovy}" href="uzivatelDetail.html" class="button">Přidat nový kontakt</a>
             </td>
         </tr>
     </table>
@@ -42,10 +42,10 @@
             <td th:text="${uzivatel.prijmeni}">Prijmeni</td>
             <td th:text="${uzivatel.role}">Role</td>
             <td>
-                <a href="detail.html" th:href="${uzivatel.id} + '.html'" class="button">Edit</a>
+                <a href="detail.html" th:href="'/uzivatelDetail/'+${uzivatel.id}" class="button">Edit</a>
             </td>
             <td>
-                <form th:action="${uzivatel.id}" method="post">
+                <form th:action="'/uzivatelDetail/'+${uzivatel.id}" method="post">
                     <input type="hidden" name="_method" value="DELETE"/>
                     <input type="submit" value="Smazat" class="button"/>
                 </form>

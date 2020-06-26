@@ -1,0 +1,19 @@
+<application>
+  <component name="JFormDesignerConfigurable">
+    <entry key="updates.checkenabled" value="false" />
+    <node name="designer">
+      <entry key="i18n.propertiestemplate" value="\n" />
+    </node>
+    <node name="javacodegenerator">
+      <entry key="variablemodifiers" value="0" />
+      <node name="templates">
+        <entry key="_class.template" value="${modifiers}class ${class_name} ${extends_declaration} {\n\n\t${variables_declaration}\n\n\t${constructor_modifiers}${class_name}() {\n\t\tinitComponents();\n\t}\n\n\t${component_initialization}\n}\n" />
+        <entry key="java.awt.Frame.template" value="${modifiers}class ${class_name} ${extends_declaration} {\n\n\t${variables_declaration}\n\n\t${constructor_modifiers}${class_name}() {\n\t\tinitComponents();\n\t}\n\n\t${component_initialization}\n}\n" />
+        <entry key="javax.swing.AbstractAction.template" value="import java.awt.event.ActionEvent;\n\n${modifiers}class ${class_name} ${extends_declaration} {\n\n\t${constructor_modifiers}${class_name}() {\n\t\t// JFormDesigner - Action initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents\n\t\t// JFormDesigner - End of action initialization  //GEN-END:initComponents\n\t}\n\n\tpublic void actionPerformed(ActionEvent e) {\n\t\t// TODO add your code here\n\t}\n}\n" />
+        <entry key="java.awt.Window.template" value="import java.awt.Window;\n\n${modifiers}class ${class_name} ${extends_declaration} {\n\n\t${variables_declaration}\n\n\t${constructor_modifiers}${class_name}(Window owner) {\n\t\tsuper(owner);\n\t\tinitComponents();\n\t}\n\n\t${component_initialization}\n}\n" />
+        <entry key="_header.template" value="${package_declaration}\n\n" />
+        <entry key="java.awt.Dialog.template" value="import java.awt.Dialog;\nimport java.awt.Frame;\n\n${modifiers}class ${class_name} ${extends_declaration} {\n\n\t${variables_declaration}\n\n\t${constructor_modifiers}${class_name}(Frame owner) {\n\t\tsuper(owner);\n\t\tinitComponents();\n\t}\n\n\t${constructor_modifiers}${class_name}(Dialog owner) {\n\t\tsuper(owner);\n\t\tinitComponents();\n\t}\n\n\t${component_initialization}\n}\n" />
+      </node>
+    </node>
+  </component>
+</application>

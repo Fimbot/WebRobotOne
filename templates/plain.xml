@@ -1,0 +1,63 @@
+<templateSet group="plain">
+  <template name="ret" value="return $VAR$ $END$;" description="return" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="COMPLETION" value="false" />
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+    </context>
+  </template>
+  <template name="tran" value="$TARGET_TYPE$ $TARGET_VARIABLE$ = new $TARGET_TYPE$();&#10;$TARGET_VARIABLE$.set$METHOD$($SOURCE_VARIABLE$.get$METHOD$());&#10;return $TARGET_VARIABLE$;" description="Generate translator" toReformat="true" toShortenFQNames="true">
+    <variable name="TARGET_TYPE" expression="methodReturnType()" defaultValue="" alwaysStopAt="true" />
+    <variable name="TARGET_VARIABLE" expression="suggestVariableName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="METHOD" expression="complete(set)" defaultValue="" alwaysStopAt="true" />
+    <variable name="SOURCE_VARIABLE" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="COMPLETION" value="false" />
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+    </context>
+  </template>
+  <template name=".set" value=".set$METHOD$($SOURCE_VARIABLE$.get$METHOD$());" description="Complete translation" toReformat="false" toShortenFQNames="true">
+    <variable name="METHOD" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="SOURCE_VARIABLE" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="COMPLETION" value="false" />
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+    </context>
+  </template>
+  <template name="logger" value="private static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger($CURRENT_CLASS$.class);&#10;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="CURRENT_CLASS" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="COMPLETION" value="false" />
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+    </context>
+  </template>
+  <template name="uoe" value="throw new UnsupportedOperationException();" description="throw new UnsupportedOperationException();" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="COMPLETION" value="false" />
+      <option name="GROOVY" value="true" />
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+    </context>
+  </template>
+  <template name="psvm" value="public static void main(String[] args){&#10;  $END$&#10;}" description="main() method declaration" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_DECLARATION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="main" value="public static void main(String[] args){&#10;  $END$&#10;}" description="main() method declaration" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_DECLARATION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+</templateSet>

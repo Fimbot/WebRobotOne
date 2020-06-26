@@ -1,2 +1,0 @@
-# Web_control_robot
-My diploma thesis is on the topic of remote reality, where I have to make a chassis for robot avatar in the practical part. The project aims to control the chassis over a wifi connection with a web interface using Raspberry PI. The higher layer will be Raspberry Pi with WIFI connection, which will run north with a web application that will be used to control the robot. It will also communicate via serial interface with the lower layer of microcontrollers, which will provide real-time control, PID motor control, sensor data processing.

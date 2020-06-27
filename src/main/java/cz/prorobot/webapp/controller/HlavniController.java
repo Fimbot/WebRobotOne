@@ -35,11 +35,7 @@ public class HlavniController {
         return drzakNaData;
     }
 
-    @RequestMapping(value = "/makra", method = RequestMethod.GET)
-    public ModelAndView zobrazMakra() {
-        ModelAndView drzakNaData = new ModelAndView("makra");
-        return drzakNaData;
-    }
+
 
 
 

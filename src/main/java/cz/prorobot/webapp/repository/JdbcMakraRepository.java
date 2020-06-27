@@ -68,7 +68,7 @@ public class JdbcMakraRepository implements MakraRepository {
 
     private void updatuj(Makra zaznamKUlozeni) {
         odesilacDotaz.update(
-                "UPDATE Makro SET Klic = ?, Hodnota = ?, Popis = ? WHERE id = ?",
+                "UPDATE Makro SET Nazev = ?, Hodnota = ?, Popis = ? WHERE id = ?",
                 zaznamKUlozeni.getNazev(),
                 zaznamKUlozeni.getHodnota(),
                 zaznamKUlozeni.getPopis(),
@@ -79,7 +79,7 @@ public class JdbcMakraRepository implements MakraRepository {
 
     private void pridej(Makra zaznamKPridani) {
         GeneratedKeyHolder drzakNaVygenerovanyKlic = new GeneratedKeyHolder();
-        String sql = "INSERT INTO Makro (Klic, Hodnota, Popis) " +
+        String sql = "INSERT INTO Makro (Nazev, Hodnota, Popis) " +
                 "VALUES (?, ?, ?)";
         odesilacDotaz.update((Connection con1) -> {
                     PreparedStatement prikaz = con1.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);

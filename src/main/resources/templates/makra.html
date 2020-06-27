@@ -21,7 +21,7 @@
                     <a href="menu.html" th:href="@{/menu}" class="button">Zpět menu</a>
                 </td>
                 <td>
-                    <p> <a th:href="@{/nastaveniNovy}" href="nastaveniDetail.html" class="button">Přidat nový záznam</a>
+                    <p> <a th:href="@{/makraNovy}" href="makraDetail.html" class="button">Přidat nový záznam</a>
                 </td>
             </tr>
         </table>
@@ -40,10 +40,10 @@
                 <td th:text="${nastav.hodnota}">Prijmeni</td>
                 <td th:text="${nastav.popis}">Role</td>
                 <td>
-                    <a href="nastaveniDetail.html" th:href="@{'/nastaveniDetail/'+${nastav.id}}" class="button">Edit</a>
+                    <a href="makraDetail.html" th:href="@{'/makraDetail/'+${nastav.id}}" class="button">Edit</a>
                 </td>
                 <td>
-                    <form th:action="@{'/nastaveniDetail/'+${nastav.id}}" method="post">
+                    <form th:action="@{'/makraDetail/'+${nastav.id}}" method="post">
                         <input type="hidden" name="_method" value="DELETE"/>
                         <input type="submit" value="Smazat" class="button"/>
                     </form>

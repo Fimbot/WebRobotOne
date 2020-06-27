@@ -29,15 +29,4 @@ public class HlavniController {
         return drzakNaData;
     }
 
-    @RequestMapping(value = "/rizeni", method = RequestMethod.GET)
-    public ModelAndView zobrazRizeni() {
-        ModelAndView drzakNaData = new ModelAndView("rizeni");
-        return drzakNaData;
-    }
-
-
-
-
-
-
 }

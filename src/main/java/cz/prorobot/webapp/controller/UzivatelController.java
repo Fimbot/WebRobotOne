@@ -10,22 +10,30 @@ import java.util.List;
 
 @Controller
 public class UzivatelController {
-    private UzivatelRepository uzivatelRepository;
+    private UzivatelRepository repository;
 
-    public UzivatelController(UzivatelRepository uzivatelRepository) {
-        this.uzivatelRepository = uzivatelRepository;
+    public UzivatelController(UzivatelRepository repository) {
+        this.repository = repository;
     }
 
     @RequestMapping(value = "/uzivatel", method = RequestMethod.GET)
     public ModelAndView zobrazSeznam() {
         ModelAndView drzakNaData = new ModelAndView("uzivatel");
-        List<Uzivatel> all = uzivatelRepository.findAll();
+        List<Uzivatel> all = repository.findAll();
         drzakNaData.addObject("uzivatele", all);
         return drzakNaData ;
     }
 
+    @RequestMapping(value = "/uzivatelDetail/{cislo}", method = RequestMethod.GET)
+    public ModelAndView zobrazDetail(@PathVariable("cislo") Long cislo) {
+        Uzivatel nalezeny = repository.findById(cislo);
+        ModelAndView drzakNaData = new ModelAndView("uzivatelDetail");
+        drzakNaData.addObject("uzivatel", nalezeny);
+        return drzakNaData;
+    }
+
     @RequestMapping(value = "/uzivatelNovy", method = RequestMethod.GET)
-    public ModelAndView zobrazDetail() {
+    public ModelAndView zobrazNovy() {
         ModelAndView drzakNaData = new ModelAndView("uzivatelDetail");
         Uzivatel uzivatel= new Uzivatel();
         drzakNaData.addObject("uzivatel",uzivatel);

@@ -32,14 +32,16 @@ public class JdbcUzivatelRepository implements UzivatelRepository{
 
     @Override
     public List<Uzivatel> findAll() {
-        List<Uzivatel> zakaznici = odesilacDotazu.query("SELECT * FROM Uzivatel", prevodnik);
-        return zakaznici;
+        List<Uzivatel> vysledek = odesilacDotazu.query("SELECT * FROM Uzivatel", prevodnik);
+        return vysledek;
     }
 
     @Override
     public  Uzivatel findById(Long id){
-    Uzivatel uzivatel= new Uzivatel();
-    return uzivatel;
+        Uzivatel vysledek = odesilacDotazu.queryForObject(
+                "SELECT * FROM Uzivatel WHERE ID=?", prevodnik, id);
+        if(vysledek==null)return new Uzivatel();
+        else return vysledek;
     }
 
     @Override

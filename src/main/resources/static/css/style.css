@@ -5,11 +5,11 @@ form {
 }
 
 form input[type="text"] {
-    background-color: #F5BC4D;
-    border-top-color: #9F6100;
-    border-left-color: #9F6100;
-    border-bottom-color: #F4EAB2;
-    border-right-color: #F4EAB2;
+    background-color: #eeeeee;
+    border-top-color: #000000;
+    border-left-color: #000000;
+    border-bottom-color: #000000;
+    border-right-color: #000000;
 }
 
 form input[type="submit"] {
@@ -92,3 +92,4 @@ td {
     border-bottom: 1px solid #333333;
     border-left: 1px solid #FFFFFF;
 }
+

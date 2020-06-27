@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xml:lang="cs" lang="cs">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/style.css"
+          th:href="@{'/css/style.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="@{'/images/favicon.png'}"/>
+    <title>WEB control robot</title>
+</head>
+<body>
+<div class="page">
+    <h1>Detail Makra</h1>
+
+    <form method="post">
+        <table>
+            <tr>
+                <td><label for="klic">Jméno</label></td>
+                <td>
+                    <input id="klic" name="nazev" value="Krteček" type="text"
+                           th:value="${makra.nazev}"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="hodnota">Hodnota</label></td>
+                <td>
+                    <input id="hodnota" name="hodnota" value="Mates" type="text"
+                           th:value="${makra.hodnota}"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="popis">Popis</label></td>
+                <td>
+                    <input id="popis" name="popis" value=0 type="text"
+                           th:value="${makra.popis}"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <a href="index.html" th:href="@{/makra}" class="button">Zpět</a>
+                    <input type="submit" class="button" value="Uložit změny"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</div>
+</body>
+</html>

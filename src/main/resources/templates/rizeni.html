@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      xml:lang="cs" lang="cs">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -13,16 +14,66 @@
 <body>
     <div class="page">
 
-        <h1>Hlavní menu pro ovládání robota:</h1>
-    </div>
+        <h1>Ovládání robota:</h1>
 
-    <table>
-        <tr>
-            <a href="menu.html"
-               th:href="@{/menu}"
-               class="actionButtonLink">Edit</a>
+        <form th:action="@{/rizeni}" method="post">
+
+
+        <table>
+            <tr >
+                <td>
+                    <h3>Moror L</h3>
+                    <input type="range" class="range" name="motorL" min="-100" max="100" value="0" />
+                </td>
+                <td>
+                    <h3>Moror R</h3>
+                    <input type="range" class="range" name="motorR" min="-100" max="100" value="0" />
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+
+                    <input type="submit" value="Odeslat" class="button"/>
+
+                </td>
+
+
+            </tr>
+
+        </table>
+        </form>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Název</th>
+                <th>Hodnota</th>
+                <th>Popis</th>
+
+            </tr>
+
+        <tr th:each="nastav : ${makra}">
+        <td th:text="${nastav.id}">Číslo</td>
+        <td th:text="${nastav.nazev}">Jméno</td>
+        <td th:text="${nastav.hodnota}">Prijmeni</td>
+        <td th:text="${nastav.popis}">Role</td>
+        <td>
+            <a href="makraDetail.html" th:href="@{'/rizeni/'+${nastav.id}}" class="button">Odeslat</a>
+        </td>
         </tr>
 
+            <tr>
+                <td>
+                    <a href="menu.html" th:href="@{/menu}" class="button">Hlavní menu</a>
+                </td>
+
+            </tr>
+
     </table>
+    </div>
+
+
+
 </body>
 </html>

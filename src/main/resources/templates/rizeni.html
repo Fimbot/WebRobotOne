@@ -12,22 +12,22 @@
     <title>WEB control robot</title>
 </head>
 <body>
-    <div class="page">
+<div class="page">
 
-        <h1>Ovládání robota:</h1>
+    <h1>Ovládání robota:</h1>
 
-        <form th:action="@{/rizeni}" method="post">
+    <form th:action="@{/rizeni}" method="post">
 
 
         <table>
-            <tr >
+            <tr>
                 <td>
                     <h3>Moror L</h3>
-                    <input type="range" class="range" name="motorL" min="-100" max="100" value="0" />
+                    <input type="range" class="range" name="motorL" min="-100" max="100" value="0"/>
                 </td>
                 <td>
                     <h3>Moror R</h3>
-                    <input type="range" class="range" name="motorR" min="-100" max="100" value="0" />
+                    <input type="range" class="range" name="motorR" min="-100" max="100" value="0"/>
                 </td>
 
             </tr>
@@ -42,37 +42,36 @@
             </tr>
 
         </table>
-        </form>
+    </form>
 
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>Název</th>
-                <th>Hodnota</th>
-                <th>Popis</th>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Název</th>
+            <th>Hodnota</th>
+            <th>Popis</th>
 
-            </tr>
-
-        <tr th:each="nastav : ${makra}">
-        <td th:text="${nastav.id}">Číslo</td>
-        <td th:text="${nastav.nazev}">Jméno</td>
-        <td th:text="${nastav.hodnota}">Prijmeni</td>
-        <td th:text="${nastav.popis}">Role</td>
-        <td>
-            <a href="makraDetail.html" th:href="@{'/rizeni/'+${nastav.id}}" class="button">Odeslat</a>
-        </td>
         </tr>
 
-            <tr>
-                <td>
-                    <a href="menu.html" th:href="@{/menu}" class="button">Hlavní menu</a>
-                </td>
+        <tr th:each="nastav : ${makra}">
+            <td th:text="${nastav.id}">Číslo</td>
+            <td th:text="${nastav.nazev}">Jméno</td>
+            <td th:text="${nastav.hodnota}">Prijmeni</td>
+            <td th:text="${nastav.popis}">Role</td>
+            <td>
+                <a href="makraDetail.html" th:href="@{'/rizeni/'+${nastav.id}}" class="button">Odeslat</a>
+            </td>
+        </tr>
 
-            </tr>
+        <tr>
+            <td>
+                <a href="menu.html" th:href="@{/menu}" class="button">Hlavní menu</a>
+            </td>
+
+        </tr>
 
     </table>
-    </div>
-
+</div>
 
 
 </body>

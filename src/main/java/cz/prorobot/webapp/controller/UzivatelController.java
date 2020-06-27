@@ -21,7 +21,7 @@ public class UzivatelController {
         ModelAndView drzakNaData = new ModelAndView("uzivatel");
         List<Uzivatel> all = repository.findAll();
         drzakNaData.addObject("uzivatele", all);
-        return drzakNaData ;
+        return drzakNaData;
     }
 
     @RequestMapping(value = "/uzivatelDetail/{cislo}", method = RequestMethod.GET)
@@ -42,9 +42,9 @@ public class UzivatelController {
     @RequestMapping(value = "/uzivatelNovy", method = RequestMethod.GET)
     public ModelAndView zobrazNovy() {
         ModelAndView drzakNaData = new ModelAndView("uzivatelDetail");
-        Uzivatel uzivatel= new Uzivatel();
-        drzakNaData.addObject("uzivatel",uzivatel);
-        return drzakNaData ;
+        Uzivatel uzivatel = new Uzivatel();
+        drzakNaData.addObject("uzivatel", uzivatel);
+        return drzakNaData;
     }
 
     @RequestMapping(value = "/uzivatelNovy", method = RequestMethod.POST)
@@ -54,18 +54,11 @@ public class UzivatelController {
     }
 
 
-
     @RequestMapping(value = "/uzivatelDetail/{idKontaktu}", params = "_method=DELETE")
     public ModelAndView zpracujSmazani(@PathVariable Long idKontaktu) {
         repository.deleteById(idKontaktu);
         return new ModelAndView("redirect:/uzivatel");
     }
-
-
-
-
-
-
 
 
 }

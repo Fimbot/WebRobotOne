@@ -13,16 +13,47 @@
 <body>
     <div class="page">
 
-        <h1>Hlavní menu pro ovládání robota:</h1>
+        <h1>Natavení parametrů robota:</h1>
+
+        <table>
+            <tr>
+                <td>
+                    <a href="menu.html" th:href="@{/menu}" class="button">Zpět menu</a>
+                </td>
+                <td>
+                    <p> <a th:href="@{/nastaveniNovy}" href="nastaveniDetail.html" class="button">Přidat nový záznam</a>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Klíč</th>
+                <th>Hodnota</th>
+                <th>Popis</th>
+
+            </tr>
+            <tr th:each="nastav : ${nastaveni}">
+                <td th:text="${nastav.id}">Číslo</td>
+                <td th:text="${nastav.klic}">Jméno</td>
+                <td th:text="${nastav.hodnota}">Prijmeni</td>
+                <td th:text="${nastav.popis}">Role</td>
+                <td>
+                    <a href="nastaveniDetail.html" th:href="@{'/nastaveniDetail/'+${nastav.id}}" class="button">Edit</a>
+                </td>
+                <td>
+                    <form th:action="@{'/nastaveniDetail/'+${nastav.id}}" method="post">
+                        <input type="hidden" name="_method" value="DELETE"/>
+                        <input type="submit" value="Smazat" class="button"/>
+                    </form>
+                </td>
+            </tr>
+        </table>
+
+
     </div>
 
-    <table>
-        <tr>
-            <a href="edit.html"
-               th:href="@{/menu}"
-               class="actionButtonLink">Edit</a>
-        </tr>
 
-    </table>
 </body>
 </html>

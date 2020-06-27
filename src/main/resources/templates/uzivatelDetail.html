@@ -20,34 +20,34 @@
             <tr>
                 <td><label for="jmeno">Jméno</label></td>
                 <td>
-                    <input id="jmeno" name="jméno" value="Krteček" type="text"
+                    <input id="jmeno" name="jmeno" value="Krteček" type="text"
                            th:value="${uzivatel.jmeno}"/>
                 </td>
             </tr>
             <tr>
                 <td><label for="prijmeni">Přijmení</label></td>
                 <td>
-                    <input id="prijmeni" name="Přijmení" value="Mates" type="text"
+                    <input id="prijmeni" name="prijmeni" value="Mates" type="text"
                            th:value="${uzivatel.prijmeni}"/>
                 </td>
             </tr>
             <tr>
                 <td><label for="role">Role</label></td>
                 <td>
-                    <input id="role" name="Role" value=0 type="number"
+                    <input id="role" name="role" value=0 type="number"
                            th:value="${uzivatel.role}"/>
                 </td>
             </tr>
             <tr>
-                <td><label for="heslo">Role</label></td>
+                <td><label for="heslo">Heslo</label></td>
                 <td>
-                    <input id="heslo" name="Heslo" value=0 type="password"
+                    <input id="heslo" name="heslo_hash" value="abcd" type="password"
                            th:value="${uzivatel.getHeslo_hash()}"/>
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <a href="index.html" th:href="'.'" class="button">Zpět</a>
+                    <a href="index.html" th:href="@{/uzivatel}" class="button">Zpět</a>
                     <input type="submit" class="button" value="Uložit změny"/>
                 </td>
             </tr>

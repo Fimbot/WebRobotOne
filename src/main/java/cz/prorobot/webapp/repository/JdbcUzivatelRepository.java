@@ -45,11 +45,45 @@ public class JdbcUzivatelRepository implements UzivatelRepository{
     }
 
     @Override
-    public void save(Uzivatel uzivatel){
-
+    public void save(Uzivatel zaznamKUlozeni) {
+        if (zaznamKUlozeni.getId() == null) {
+            pridej(zaznamKUlozeni);
+        } else {
+            updatuj(zaznamKUlozeni);
+        }
     }
+
     @Override
-    public void deleteById(Long id){
+    public void deleteById(Long id) {
+        odesilacDotazu.update(
+                "DELETE FROM Uzivatel WHERE id = ?",
+                id);
+    }
+
+    private void updatuj(Uzivatel zaznamKUlozeni) {
+        odesilacDotazu.update(
+                "UPDATE Uzivatel SET Jmeno = ?, Prijmeni = ?, Role = ?, Heslo_hash = ? WHERE id = ?",
+                zaznamKUlozeni.getJmeno(),
+                zaznamKUlozeni.getPrijmeni(),
+                zaznamKUlozeni.getRole(),
+                zaznamKUlozeni.getHeslo_hash(),
+                zaznamKUlozeni.getId());
+    }
+
+    private void pridej(Uzivatel zaznamKPridani) {
+        GeneratedKeyHolder drzakNaVygenerovanyKlic = new GeneratedKeyHolder();
+        String sql = "INSERT INTO Uzivatel (Jmeno, Prijmeni, Role, Heslo_hash) " +
+                "VALUES (?, ?, ?, ?)";
+        odesilacDotazu.update((Connection con) -> {
+                    PreparedStatement prikaz = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+                    prikaz.setString(1, zaznamKPridani.getJmeno());
+                    prikaz.setString(2, zaznamKPridani.getPrijmeni());
+                    prikaz.setInt(3, zaznamKPridani.getRole());
+                    prikaz.setString(4, zaznamKPridani.getHeslo_hash());
+                    return prikaz;
+                },
+                drzakNaVygenerovanyKlic);
+        zaznamKPridani.setId(drzakNaVygenerovanyKlic.getKey().longValue());
 
     }
 

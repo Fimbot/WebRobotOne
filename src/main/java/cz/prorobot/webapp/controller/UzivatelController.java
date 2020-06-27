@@ -32,12 +32,33 @@ public class UzivatelController {
         return drzakNaData;
     }
 
+    @RequestMapping(value = "/uzivatelDetail/{cislo}", method = RequestMethod.POST)
+    public ModelAndView zpracujDetail(@PathVariable("cislo") Long cislo, Uzivatel formular) {
+        formular.setId(cislo);
+        repository.save(formular);
+        return new ModelAndView("redirect:/uzivatel");
+    }
+
     @RequestMapping(value = "/uzivatelNovy", method = RequestMethod.GET)
     public ModelAndView zobrazNovy() {
         ModelAndView drzakNaData = new ModelAndView("uzivatelDetail");
         Uzivatel uzivatel= new Uzivatel();
         drzakNaData.addObject("uzivatel",uzivatel);
         return drzakNaData ;
+    }
+
+    @RequestMapping(value = "/uzivatelNovy", method = RequestMethod.POST)
+    public ModelAndView zpracujNovy(Uzivatel formular) {
+        repository.save(formular);
+        return new ModelAndView("redirect:/uzivatel");
+    }
+
+
+
+    @RequestMapping(value = "/uzivatelDetail/{idKontaktu}", params = "_method=DELETE")
+    public ModelAndView zpracujSmazani(@PathVariable Long idKontaktu) {
+        repository.deleteById(idKontaktu);
+        return new ModelAndView("redirect:/uzivatel");
     }
 
 

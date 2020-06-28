@@ -49,7 +49,7 @@ public class JdbcUzivatelRepository implements UzivatelRepository {
 
     @Override
     public void save(Uzivatel zaznamKUlozeni) {
-        if (findById(zaznamKUlozeni.getId()) == null) {
+        if (zaznamKUlozeni.getId() == null) {
             pridej(zaznamKUlozeni);
         } else {
             updatuj(zaznamKUlozeni);

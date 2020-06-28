@@ -19,18 +19,10 @@ public class JdbcUzivatelRepository implements UzivatelRepository {
     private RowMapper<Uzivatel> prevodnik;
 
     public JdbcUzivatelRepository() {
-        try {
-            MariaDbDataSource konfiguraceDatabaze = new MariaDbDataSource();
+        MariaDbKonfig konfig=new MariaDbKonfig();
+        odesilacDotazu = new JdbcTemplate(konfig.getKonfiguraceDatabaze());
+        prevodnik = BeanPropertyRowMapper.newInstance(Uzivatel.class);
 
-            konfiguraceDatabaze.setUserName("student");
-            konfiguraceDatabaze.setPassword("password");
-            konfiguraceDatabaze.setUrl("jdbc:mysql://localhost:3306/robot_one");
-
-            odesilacDotazu = new JdbcTemplate(konfiguraceDatabaze);
-            prevodnik = BeanPropertyRowMapper.newInstance(Uzivatel.class);
-        } catch (SQLException e) {
-            throw new DataSourceLookupFailureException("Nepodarilo se vytvorit DataSource", e);
-        }
     }
 
     @Override

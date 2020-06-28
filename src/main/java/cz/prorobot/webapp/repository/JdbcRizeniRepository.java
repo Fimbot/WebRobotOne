@@ -22,18 +22,10 @@ public class JdbcRizeniRepository implements RizeniRepository {
     private RowMapper<Rizeni> prevodnik;
 
     public JdbcRizeniRepository() {
-        try {
-            MariaDbDataSource konfiguraceDatabaze = new MariaDbDataSource();
+        MariaDbKonfig konfig=new MariaDbKonfig();
+        odesilacDotaz = new JdbcTemplate(konfig.getKonfiguraceDatabaze());
+        prevodnik = BeanPropertyRowMapper.newInstance(Rizeni.class);
 
-            konfiguraceDatabaze.setUserName("student");
-            konfiguraceDatabaze.setPassword("password");
-            konfiguraceDatabaze.setUrl("jdbc:mysql://localhost:3306/robot_one");
-
-            odesilacDotaz = new JdbcTemplate(konfiguraceDatabaze);
-            prevodnik = BeanPropertyRowMapper.newInstance(Rizeni.class);
-        } catch (SQLException e) {
-            throw new DataSourceLookupFailureException("Nepodarilo se vytvorit DataSource", e);
-        }
     }
 
     @Override

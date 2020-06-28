@@ -22,18 +22,10 @@ public class JdbcMakraRepository implements MakraRepository {
     private RowMapper<Makra> prevodnik;
 
     public JdbcMakraRepository() {
-        try {
-            MariaDbDataSource konfiguraceDatabaze = new MariaDbDataSource();
+        MariaDbKonfig konfig=new MariaDbKonfig();
+        odesilacDotaz = new JdbcTemplate(konfig.getKonfiguraceDatabaze());
+        prevodnik = BeanPropertyRowMapper.newInstance(Makra.class);
 
-            konfiguraceDatabaze.setUserName("student");
-            konfiguraceDatabaze.setPassword("password");
-            konfiguraceDatabaze.setUrl("jdbc:mysql://localhost:3306/robot_one");
-
-            odesilacDotaz = new JdbcTemplate(konfiguraceDatabaze);
-            prevodnik = BeanPropertyRowMapper.newInstance(Makra.class);
-        } catch (SQLException e) {
-            throw new DataSourceLookupFailureException("Nepodarilo se vytvorit DataSource", e);
-        }
     }
 
     @Override

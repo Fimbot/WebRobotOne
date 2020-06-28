@@ -1,5 +1,6 @@
 package cz.prorobot.webapp;
 
+import cz.prorobot.webapp.entity.JSerialComm01;
 import org.slf4j.*;
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
@@ -18,14 +19,17 @@ public class SpousteciTrida extends SpringBootServletInitializer {
     private static final Logger logger = LoggerFactory.getLogger(SpousteciTrida.class);
 
 
+
     /**
      * Spousteci metoda v aplikaci, pokud je aplikace spoustena jako .jar
      */
     public static void main(String[] args) {
+
         SpringApplication app = new SpringApplicationBuilder()
                 .sources(SpousteciTrida.class)
                 .build();
         app.run(args);
+
     }
 
 
